@@ -4,7 +4,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 
 [Serializable]
-public struct RawInputData : IComponentData
+public struct FollowCameraSystem : IComponentData
 {
     // Add fields to your component here. Remember that:
     //
