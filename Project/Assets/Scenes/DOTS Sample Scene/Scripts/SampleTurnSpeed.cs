@@ -3,9 +3,8 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 
-[Serializable]
 [GenerateAuthoringComponent]
-public struct RotationSpeed : IComponentData
+public struct SampleTurnSpeed : IComponentData
 {
     // Add fields to your component here. Remember that:
     //
@@ -21,6 +20,6 @@ public struct RotationSpeed : IComponentData
     //   for runtime use here. Authoring Components will be used for 
     //   authoring the data in the Editor.
     
-    public float rotationSpeed;
+    public float turnSpeed;
     
 }
