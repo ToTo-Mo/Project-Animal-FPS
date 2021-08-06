@@ -1657,6 +1657,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 7919873142316850820, guid: 87e49dbc10733ce4785dafb093259ec3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919873142316850820, guid: 87e49dbc10733ce4785dafb093259ec3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.455
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919873142316850820, guid: 87e49dbc10733ce4785dafb093259ec3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.623
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885777827996732382, guid: 87e49dbc10733ce4785dafb093259ec3, type: 3}
+      propertyPath: gunData.rateOfFire
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e49dbc10733ce4785dafb093259ec3, type: 3}
 --- !u!1001 &8242590154409779022

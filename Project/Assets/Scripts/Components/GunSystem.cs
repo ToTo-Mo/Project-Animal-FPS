@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Gun : MonoBehaviour
+public class GunSystem : MonoBehaviour
 {
     // Gun Data
     public GunData gunData;
