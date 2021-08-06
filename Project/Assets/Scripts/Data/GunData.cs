@@ -15,6 +15,7 @@ public class GunData
     public Vector2 recoil;
     public float effectiveDistance;
     public float rateOfFire;
+    public float timeBetweenFire;
     public float muzzleVelocity;
     public float ergonomics;
     public float reloadTime;
