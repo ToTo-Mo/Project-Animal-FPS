@@ -81,10 +81,14 @@ public class Gun : MonoBehaviour
         // 3. 방향 벡터 구하기   A - B
         Vector3 targetDirection = targetPosition - muzzlePosition.position;
 
+
         // 4. 반동 계산
         float horizontalRecoil = Random.Range(-gunData.recoil.x, gunData.recoil.x);
         float verticalRecoil = Random.Range(-gunData.recoil.y, gunData.recoil.y);
         targetDirection += new Vector3(horizontalRecoil, verticalRecoil, 0);
+
+        // 3-1. 거리에 따라 총알의 속력이 일정하도록  정규화 벡터로 변경
+        targetDirection = targetDirection.normalized;
 
         // 5. 총알 생성
         GameObject ammo = Instantiate(gunData.ammo, muzzlePosition.position, Quaternion.identity);
@@ -98,18 +102,15 @@ public class Gun : MonoBehaviour
         ammoShot++;
 
         // 7. 총의 연사 속도
+        float timeRatePerShooting = 60 / gunData.rateOfFire ;
         if(allowInvoke){
-            float timeRatePerShooting = 60 / gunData.rateOfFire ;
-
             Invoke("ResetShoot", timeRatePerShooting);
             allowInvoke = false;
         }
 
         // 8. 한번에 발사하는 총알의 수가 여러개 라면 Shoot 함수를 반복
         if(ammoShot < gunData.ammoPerFire && gunData.numberOfAmmoInMagazine > 0){
-            float timeRatePerShooting = 60 / gunData.rateOfFire;
-            
-            Invoke("Shoot", timeRatePerShooting);
+            Invoke("Shoot", gunData.timeBetweenFire);
         }
     }
 
